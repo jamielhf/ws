@@ -9,7 +9,13 @@ const userController  = {
         if(res.length == 0){
             res = {}
         }
-        ctx.body = res
+        await ctx.render('login', {
+            title: 'Hello Koa 2!'
+          })
+        
+    },
+    async register(ctx,next){
+        await ctx.render('register',{})
     }
 }
 
